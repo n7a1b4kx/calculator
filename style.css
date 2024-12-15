@@ -63,12 +63,25 @@ body {
 
 .button-container {
     display: flex;
+}
+
+.numerical-button {
+    display: flex;
     width: 180px;
     flex-wrap: wrap;
+}
+
+.numerical-button, .method-button {
     gap: 12px;
 }
 
+.method-button {
+    display: flex;
+    flex-direction: column;
+}
+
 .button {
+    text-align: center;
     height: 48px;
     width: 48px;
     font-size: 24px;
@@ -77,10 +90,17 @@ body {
     color: darkkhaki;
     outline: none;
     border: 1px solid #000000;
-    cursor: pointer;
+    cursor: grab;
     box-shadow: 3px 3px #00000070;
 }
 
+#addition {
+    cursor: cell;
+}
+
+#subtract {
+    cursor: url('./substractRemove.png'), auto;
+}  
 .button:hover {
     background-color: darkkhaki;
     color: #53354A;
@@ -88,5 +108,6 @@ body {
 
 .button:active {
     box-shadow: 3px 3px #000000;
+    cursor: grabbing;
     transform: translateY(4px);
 }
