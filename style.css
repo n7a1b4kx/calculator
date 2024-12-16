@@ -59,13 +59,14 @@ body {
 
 #panel {
     display: flex;
+    height: 27px;
     flex-grow: 3;
     justify-content: flex-end;
     border: 2px solid #000000;
     padding: 12px;
     background-color: #000000;
     font-size: 24px;
-    box-shadow: 3px 3px #00000070;
+    box-shadow: 5px 5px 5px #00000070;
     color: #ffffff;
 }
 
@@ -102,7 +103,7 @@ body {
     outline: none;
     border: 1px solid #000000;
     cursor: grab;
-    box-shadow: 3px 3px #00000070;
+    box-shadow: 5px 5px 5px #00000070;
 }
 
 .button:hover {
