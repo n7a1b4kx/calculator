@@ -54,7 +54,7 @@ body {
     padding: 16px;
     gap: 12px;
     background-color: #903749;
-    box-shadow: 0 0 30px 10px #000000;
+    box-shadow: 10px 10px 10px #000000;
 }
 
 #panel {
