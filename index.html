@@ -19,7 +19,7 @@
             <div id="calculator" class="wrapper">
                 <div class="row">
                     <div id="panel">
-                        <div id="operator">&#43;</div>
+                        <div id="operator"></div>
                         <div id="number"></div>
                     </div>
                 </div>
@@ -36,14 +36,14 @@
                         <button class="button" id="five" type="button" value="five">5</button>
                         <button class="button" id="six" type="button" value="six">6</button>
                         <button class="button" id="substract" type="button" value="substract" onclick="CALCULATOR.substraction()">&#8722;</button>
-                        <button class="button" id="percent" type="button" value="percent">&#37;</button>
+                        <button class="button" id="percent" type="button" value="percent" onclick="CALCULATOR.percentage()">&#37;</button>
                     </div>
                     <div class="row">
                         <button class="button" id="one" type="button" value="one">1</button>
                         <button class="button" id="two" type="button" value="two">2</button>
                         <button class="button" id="three" type="button" value="three">3</button>
-                        <button class="button" id="multiply" type="button" value="multiply">&#215;</button>
-                        <button class="button" id="division" type="button" value="division">&#247;</button>
+                        <button class="button" id="multiply" type="button" value="multiply" onclick="CALCULATOR.multiply()">&#215;</button>
+                        <button class="button" id="division" type="button" value="division" onclick="CALCULATOR.division()">&#247;</button>
                     </div>
                     <div class="row">
                         <button class="button" id="zero" type="button" value="zero">0</button>
