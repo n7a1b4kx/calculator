@@ -61,7 +61,8 @@ body {
     display: flex;
     height: 27px;
     flex-grow: 3;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     border: 2px solid #000000;
     padding: 12px;
     background-color: #000000;
@@ -94,6 +95,7 @@ body {
 
 .button {
     text-align: center;
+    align-items: center;
     height: 48px;
     width: 48px;
     font-size: 24px;
@@ -112,7 +114,7 @@ body {
 }
 
 .button:active {
-    box-shadow: 3px 3px #000000;
+    box-shadow: 4px 4px 4px #000000;
     cursor: grabbing;
     transform: translateY(4px);
 }
