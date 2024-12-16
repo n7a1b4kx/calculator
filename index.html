@@ -19,7 +19,8 @@
             <div id="calculator" class="wrapper">
                 <div class="row">
                     <div id="panel">
-                        Panel
+                        <div id="operator">&#43;</div>
+                        <div id="number"></div>
                     </div>
                 </div>
                 <div class="button-wrapper">
@@ -27,14 +28,14 @@
                         <button class="button" id="seven" type="button" value="seven">7</button>
                         <button class="button" id="eight" type="button" value="eight">8</button>
                         <button class="button" id="nine" type="button" value="nine">9</button>
-                        <button class="button" id="addition" type="button" value="addition">&#43;</button>
-                        <button class="button" id="power" type="button" value="power">&#94;</button>
+                        <button class="button" id="addition" type="button" value="addition" onclick="CALCULATOR.addition()">&#43;</button>
+                        <button class="button" id="power" type="button" value="power" onclick="CALCULATOR.power()">&#94;</button>
                     </div>
                     <div class="row">
                         <button class="button" id="four" type="button" value="four">4</button>
                         <button class="button" id="five" type="button" value="five">5</button>
                         <button class="button" id="six" type="button" value="six">6</button>
-                        <button class="button" id="substract" type="button" value="substract">&#8722;</button>
+                        <button class="button" id="substract" type="button" value="substract" onclick="CALCULATOR.substraction()">&#8722;</button>
                         <button class="button" id="percent" type="button" value="percent">&#37;</button>
                     </div>
                     <div class="row">
@@ -47,7 +48,7 @@
                     <div class="row">
                         <button class="button" id="zero" type="button" value="zero">0</button>
                         <button class="button" id="equal" type="button" value="equal">&#61;</button>
-                        <button class="button" id="clear" type="button" value="clear" class="floating-button" onclick="clearPanel()">Clear</button>
+                        <button class="button" id="clear" type="button" value="clear" class="floating-button" onclick="CALCULATOR.clearPanel()">Clear</button>
                     </div>
                 </div>
             </div>
