@@ -17,37 +17,39 @@
     <main id="main">
         <div id="container">
             <div id="calculator" class="wrapper">
-                <div class="row">
+                <div class="column">
                     <div id="panel">
-                        <div id="operator"></div>
-                        <div id="number"></div>
+                        <div id="operator-display"></div>
+                        <div id="expression-display"></div>
                     </div>
+                    <div id="currentExpression"></div>
                 </div>
                 <div class="button-wrapper">
                     <div class="row">
-                        <button class="button" id="seven" type="button" value="seven">7</button>
-                        <button class="button" id="eight" type="button" value="eight">8</button>
-                        <button class="button" id="nine" type="button" value="nine">9</button>
-                        <button class="button" id="addition" type="button" value="addition" onclick="CALCULATOR.addition()">&#43;</button>
-                        <button class="button" id="power" type="button" value="power" onclick="CALCULATOR.power()">&#94;</button>
+                        <button class="button" id="seven" type="button" value="7">7</button>
+                        <button class="button" id="eight" type="button" value="8">8</button>
+                        <button class="button" id="nine" type="button" value="9">9</button>
+                        <button class="button operator" id="addition" type="button" value="&#43;" >&#43;</button>
+                        <button class="button operator" id="power" type="button" value="&#94;">&#94;</button>
                     </div>
                     <div class="row">
-                        <button class="button" id="four" type="button" value="four">4</button>
-                        <button class="button" id="five" type="button" value="five">5</button>
-                        <button class="button" id="six" type="button" value="six">6</button>
-                        <button class="button" id="substract" type="button" value="substract" onclick="CALCULATOR.substraction()">&#8722;</button>
-                        <button class="button" id="percent" type="button" value="percent" onclick="CALCULATOR.percentage()">&#37;</button>
+                        <button class="button" id="four" type="button" value="4" >4</button>
+                        <button class="button" id="five" type="button" value="5" >5</button>
+                        <button class="button" id="six" type="button" value="6" >6</button>
+                        <button class="button operator" id="substract" type="button" value="&#8722;">&#8722;</button>
+                        <button class="button operator" id="remainder" type="button" value="&#37;">&#37;</button>
                     </div>
                     <div class="row">
-                        <button class="button" id="one" type="button" value="one">1</button>
-                        <button class="button" id="two" type="button" value="two">2</button>
-                        <button class="button" id="three" type="button" value="three">3</button>
-                        <button class="button" id="multiply" type="button" value="multiply" onclick="CALCULATOR.multiply()">&#215;</button>
-                        <button class="button" id="division" type="button" value="division" onclick="CALCULATOR.division()">&#247;</button>
+                        <button class="button" id="one" type="button" value="1">1</button>
+                        <button class="button" id="two" type="button" value="2">2</button>
+                        <button class="button" id="three" type="button" value="3">3</button>
+                        <button class="button operator" id="multiply" type="button" value="&#215;">&#215;</button>
+                        <button class="button operator" id="division" type="button" value="&#247;">&#247;</button>
                     </div>
                     <div class="row">
-                        <button class="button" id="zero" type="button" value="zero">0</button>
-                        <button class="button" id="equal" type="button" value="equal">&#61;</button>
+                        <button class="button" id="zero" type="button" value="0" >0</button>
+                        <button class="button" id="period" type="button" value="." ">&sdot;</button>
+                        <button class="button operator" id="equal" type="button" value="&#61;">&#61;</button>
                         <button class="button" id="clear" type="button" value="clear" class="floating-button" onclick="CALCULATOR.clearPanel()">Clear</button>
                     </div>
                 </div>
