@@ -61,6 +61,7 @@ body {
     display: flex;
     height: 27px;
     flex-grow: 2;
+    gap: 8px;
     justify-content: space-between;
     align-items: center;
     border: 2px solid #000000;
