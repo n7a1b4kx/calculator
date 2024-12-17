@@ -106,8 +106,16 @@ body {
 }
 
 #clear:hover {
-    background-color: darkkhaki;
-    color: #53354A;
+    background-color: grey;
+}
+
+#equal {
+    color: #ffffff;
+    background-color: #00000070;
+}
+
+#equal:hover {
+    background-color: grey;
 }
 
 .button:hover {
