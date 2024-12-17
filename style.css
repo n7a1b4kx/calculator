@@ -71,16 +71,6 @@ body {
     color: #ffffff;
 }
 
-#clear {
-    flex-grow: 2;
-    width: 80px;
-}
-
-#equal {
-    box-sizing: content-box;
-    flex-grow: 4;
-}
-
 .row {
     display: flex;
     align-items: center;
@@ -106,6 +96,18 @@ body {
     border: 1px solid #000000;
     cursor: grab;
     box-shadow: 5px 5px 5px #00000070;
+}
+
+#clear {
+    background-color: #ff000070;
+    color: #ffffff;
+    box-sizing: content-box;
+    flex-grow: 2;
+}
+
+#clear:hover {
+    background-color: darkkhaki;
+    color: #53354A;
 }
 
 .button:hover {
