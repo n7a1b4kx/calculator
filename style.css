@@ -14,13 +14,13 @@ body {
 #header {
     background-color: #2B2E4A;
     font-size: 24px;
-    margin-bottom: 64px;
+    margin-bottom: 168px;
 }
 
 #footer {
     background-color: #53354A;
     font-size: 18px;
-    margin-top: 64px;
+    margin-top: 168px;
 }
 
 #header, #container, #footer {
@@ -54,13 +54,13 @@ body {
     padding: 16px;
     gap: 12px;
     background-color: #903749;
-    box-shadow: 10px 10px 10px #000000;
+    box-shadow: 10px 10px 15px #000000;
 }
 
 #panel {
     display: flex;
     height: 27px;
-    flex-grow: 3;
+    flex-grow: 2;
     justify-content: space-between;
     align-items: center;
     border: 2px solid #000000;
@@ -86,6 +86,7 @@ body {
 .button {
     text-align: center;
     align-items: center;
+    flex-grow: 2;
     height: 48px;
     width: 48px;
     font-size: 24px;
@@ -99,6 +100,8 @@ body {
 }
 
 #clear {
+    flex-shrink: 0;
+    width: 106px;
     background-color: #ff000070;
     color: #ffffff;
     box-sizing: content-box;
@@ -110,6 +113,7 @@ body {
 }
 
 #equal {
+    flex-shrink: 0;
     color: #ffffff;
     background-color: #00000070;
 }
