@@ -18,6 +18,14 @@ NUM_BUTTON.forEach((button) => {
     })
 });
 
+const BUTTON = document.querySelectorAll('.button');
+BUTTON.forEach((button)  => {
+    button.addEventListener('click', () => {
+        (button.innerHTML !== 'Clear') ?
+            currentEXPRESSION.innerHTML += button.innerHTML: null;
+    })
+});
+
 function userInput(input) {
     let size = EXPRESSION_DISPLAY.innerText.length;
     (size <= 16) ? EXPRESSION_DISPLAY.innerText += input: alert('oh no!');
@@ -30,7 +38,9 @@ const CALCULATOR = {
     isOperandTwoEmpty: true,
     operator: '',
     isOperatorEmpty: true,
+    computeExpression: () => alert(),
     clearPanel: () => {
+        currentEXPRESSION.innerHTML = '';
         OPERATOR_DISPLAY.innerHTML = '';
         EXPRESSION_DISPLAY.innerText = '';
     },
