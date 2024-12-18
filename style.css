@@ -72,6 +72,21 @@ body {
     color: #ffffff;
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#currentExpression {
+    height: 18px;
+    text-align: end;
+    padding: 4px;
+    color: #ffffff;
+    border: 1px solid #000000;
+    background-color: #00000070;
+}
+
 .row {
     display: flex;
     align-items: center;
