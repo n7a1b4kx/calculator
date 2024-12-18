@@ -46,29 +46,25 @@ const CALCULATOR = {
         switch (CALCULATOR.operator) {
             case 'addition':
                 CALCULATOR.operandOne = CALCULATOR.operandOne + CALCULATOR.operandTwo;
-                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
                 break;
             case 'substract':
                 CALCULATOR.operandOne = CALCULATOR.operandOne - CALCULATOR.operandTwo;
-                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
                 break;
             case 'multiply':
                 CALCULATOR.operandOne = CALCULATOR.operandOne * CALCULATOR.operandTwo;
-                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
                 break;
             case 'division':
                 CALCULATOR.operandOne = Math.round((CALCULATOR.operandOne / CALCULATOR.operandTwo) * 10) / 10;
-                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
                 break;
             case 'power':
                 CALCULATOR.operandOne = CALCULATOR.operandOne ** CALCULATOR.operandTwo;
-                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
                 break;
             case 'remainder':
                 CALCULATOR.operandOne = CALCULATOR.operandOne % CALCULATOR.operandTwo;
-                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
                 break;
         }
+        EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
+        CALCULATOR.operandTwo = null;
         CALCULATOR.isOperatorEmpty = true;
         CALCULATOR.operator = '';
         OPERATOR_DISPLAY.innerHTML = '&#61';
