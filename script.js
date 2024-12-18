@@ -7,7 +7,12 @@ const currentEXPRESSION = document.querySelector('#currentExpression');
 const OPERATOR_BUTTON = document.querySelectorAll('.operator');
 OPERATOR_BUTTON.forEach((button) => {
     button.addEventListener('click', () => {
-        OPERATOR_DISPLAY.innerHTML = button.value;
+        if (CALCULATOR.isOperatorEmpty) {
+            OPERATOR_DISPLAY.innerHTML = button.value;
+            CALCULATOR.operator = button.id;
+            EXPRESSION_DISPLAY.innerText = '';
+            CALCULATOR.isOperatorEmpty = false;
+        }
     })
 });
 
@@ -29,17 +34,49 @@ BUTTON.forEach((button)  => {
 function userInput(input) {
     let size = EXPRESSION_DISPLAY.innerText.length;
     (size <= 16) ? EXPRESSION_DISPLAY.innerText += input: alert('oh no!');
+    (CALCULATOR.isOperatorEmpty) ? CALCULATOR.operandOne = parseInt((CALCULATOR.operandOne || '') + input): CALCULATOR.operandTwo = parseInt((CALCULATOR.operandTwo || '') + input);
 }
 
 const CALCULATOR = {
     operandOne: null,
     operandTwo: null,
-    isOperandOneEmpty: true,
-    isOperandTwoEmpty: true,
     operator: '',
     isOperatorEmpty: true,
-    computeExpression: () => alert(),
+    computeExpression: () => {
+        switch (CALCULATOR.operator) {
+            case 'addition':
+                CALCULATOR.operandOne = CALCULATOR.operandOne + CALCULATOR.operandTwo;
+                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
+                break;
+            case 'substract':
+                CALCULATOR.operandOne = CALCULATOR.operandOne - CALCULATOR.operandTwo;
+                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
+                break;
+            case 'multiply':
+                CALCULATOR.operandOne = CALCULATOR.operandOne * CALCULATOR.operandTwo;
+                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
+                break;
+            case 'division':
+                CALCULATOR.operandOne = Math.round((CALCULATOR.operandOne / CALCULATOR.operandTwo) * 10) / 10;
+                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
+                break;
+            case 'power':
+                CALCULATOR.operandOne = CALCULATOR.operandOne ** CALCULATOR.operandTwo;
+                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
+                break;
+            case 'remainder':
+                CALCULATOR.operandOne = CALCULATOR.operandOne % CALCULATOR.operandTwo;
+                EXPRESSION_DISPLAY.innerText = CALCULATOR.operandOne;
+                break;
+        }
+        CALCULATOR.isOperatorEmpty = true;
+        CALCULATOR.operator = '';
+        OPERATOR_DISPLAY.innerHTML = '&#61';
+    },
     clearPanel: () => {
+        CALCULATOR.operandOne = null;
+        CALCULATOR.operandTwo = null;
+        CALCULATOR.isOperatorEmpty = true;
         currentEXPRESSION.innerHTML = '';
         OPERATOR_DISPLAY.innerHTML = '';
         EXPRESSION_DISPLAY.innerText = '';
